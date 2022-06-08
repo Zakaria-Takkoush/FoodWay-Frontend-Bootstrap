@@ -35,8 +35,7 @@ add_resto.addEventListener("click", function (event) {
     event.preventDefault()
 
 
-
-    //Axios Function - Post
+    //Fetch Function - Add Restaurant
 
     let data = new FormData();
     data.append('resto_name', resto_name);
@@ -44,16 +43,39 @@ add_resto.addEventListener("click", function (event) {
     data.append('description', desc);
     data.append('cat_id', cat_id);
     data.append('city_id', city_id);
-    axios({
-        method: 'post',
-        url: 'http://localhost/FoodWay-Backend/add_resto.php',
-        data: data,
+    
+    fetch('http://127.0.0.1:8000/api/add_resto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
     })
-        .then(function (response) {
-            let result = response.data;
-            console.log(result);
-        }
-        )
+    .then(response => response.json()) 
+    .then(data => 
+        { console.log(data)}
+    )
+    .catch(err => console.log(err))
+
+
+//     //Axios Function - Post
+
+//     let data = new FormData();
+//     data.append('resto_name', resto_name);
+//     data.append('phone_number', phone_number);
+//     data.append('description', desc);
+//     data.append('cat_id', cat_id);
+//     data.append('city_id', city_id);
+//     axios({
+//         method: 'post',
+//         url: 'http://localhost/FoodWay-Backend/add_resto.php',
+//         data: data,
+//     })
+//         .then(function (response) {
+//             let result = response.data;
+//             console.log(result);
+//         }
+//         )
 
 })
 
@@ -144,7 +166,3 @@ document.getElementById("tbody").innerHTML = table;
 .catch((error) => {
   console.error('Error:', error);
 });
-
-
-
-
