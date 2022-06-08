@@ -18,3 +18,5 @@ users_page.addEventListener("click", function(){
 reviews_page.addEventListener("click", function(){
     document.location='../admin_reviews/admin_reviews.html';
 })
+
+
