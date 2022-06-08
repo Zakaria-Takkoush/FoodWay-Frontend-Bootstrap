@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Manage Users</title>
+    <link rel="stylesheet" href="admin_users.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+
+        <div class="page">
+
+            <div class="side_bar">
+                <div id="restos_page">Restaurants</div>
+                <div class="current_page"id="users_page">Users</div>
+                <div id="reviews_page">Reviews</div>
+            </div>
+
+            <div class="page_content">
+                <div class="tool_header">
+                    Manage Users
+                </div>
+
+                <div class="panel">
+                    <table id="tbody">
+                        <tr>
+                            <th>User ID</th>
+                            <th>User Full Name</th>
+                            <th>email</th>
+                            <th>Gender</th>
+                            <th>City</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="admin_users.js"></script>
+</body>
+</html>

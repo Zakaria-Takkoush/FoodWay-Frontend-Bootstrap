@@ -55,24 +55,22 @@ create_account.addEventListener("click", function(event) {
 // })
 
 // data to be sent to the POST request
-    let user_data = {
-        first_name: first_name,
-        last_name: last_name,
-        gender: gender,
-        email: email,
-        password: password,
-        city_id: city_id
-    }
+    let data = new FormData();
+    data.append('first_name', JSON.stringify(first_name));
+    data.append('last_name', JSON.stringify(last_name));
+    data.append('gender', JSON.stringify(gender));
+    data.append('email', JSON.stringify(email));
+    data.append('password', JSON.stringify(password));
+    data.append('city_id', JSON.stringify(city_id));
 
     fetch('http://127.0.0.1:8000/api/signup', {
         method: 'POST', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user_data),
+        body: data
     })
     .then(response => response.json()) 
-    .then(json => console.log(json))
+    // .then(json => console.log(json))
+    .then(data => { console.log(data)}
+    )
     .catch(err => console.log(err))
 
 })

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page - Manage Restaurants</title>
+    <link rel="stylesheet" href="admin_restos.css" />
+    <script
+      src="https://kit.fontawesome.com/6d5273fb5e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      
+        <div class="header">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+
+      <div class="page">
+
+        <div class="side_bar">
+          <div class="current_page" id="restos_page">Restaurants</div>
+          <div id="users_page">Users</div>
+          <div id="reviews_page">Reviews</div>
+        </div>
+
+        <div class="page_content">
+            <div class="tool_header">
+              Manage Restaurants
+            </div>
+
+            <form action="" class="form">
+              <div class="name-phone">
+                <label for="">Restaurant Name</label>
+                <input type="text" name="resto_name" id="resto_name" required/>
+                <label for="">Phone Number</label>
+                <input type="text" name="phone_number" id="phone_number"  required/>
+              </div>
+  
+              <div class="selects">
+                <label for="">Category</label>
+                <select name="" id="cate">
+                  <option value="0">Fast Food</option>
+                  <option value="1">Lebanese</option>
+                  <option value="2">Vegeterian</option>
+                  <option value="3">Home Kitchen</option>
+                  <option value="4">Burgers</option>
+                  <option value="5">Pizza</option>
+                  <option value="6">Italian</option>
+                  <option value="7">Chinese</option>
+                  <option value="8">Desserts</option>
+              </select>
+                <label for="">City</label>
+                  <select name="" id="city">
+                      <option value="0">Beirut</option>
+                      <option value="1">Saida</option>
+                      <option value="2">Tripoli</option>
+                      <option value="3">Tyre</option>
+                      <option value="4">Baalbeck</option>
+                      <option value="5">Jbeil</option>
+                      <option value="6">Batroun</option>
+                      <option value="7">Jounieh</option>
+                      <option value="8">Nabateye</option>
+                  </select>
+              </div>
+              <label for="">Description</label>
+              <input type="textarea" id="description" class="desc-txt" required/>
+  
+              <button id="create">Create</button>
+            </form>
+
+            <div class="panel">
+              <table>
+                
+                  <tr>
+                    <th>Restaurant ID</th>
+                    <th>Restaurant Name</th>
+                    <th>Phone Number</th>
+                    <th>Category</th>
+                    <th>City</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                  <tbody id="tbody">
+                </tbody>
+              </table>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="admin_restos.js"></script>
+  </body>
+</html>

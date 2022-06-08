@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Admin Page classes */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #FFEF82;
+}
+
+.header > img {
+    height: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+}
+
+.side_bar {
+    height: 100vh;
+    width: 200px;
+    background-color: #BABD42;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.side_bar > div {
+    width: 100%;
+    font-size: 25px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.side_bar > div:hover {
+    background-color: #FFEF82;
+    cursor: pointer;
+    color: #82954B;
+}
+
+.current_page
+{
+    background-color: darkgreen;
+}
+
+.header > img {
+    cursor: pointer;
+}
+
+.page_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.tool_header {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #82954B
+}
+
+.panel {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th {
+    height: 50px;
+    background-color: #BABD42;
+}
+
+th, td {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .side_bar {
+        height: fit-content;
+        width: 100%;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

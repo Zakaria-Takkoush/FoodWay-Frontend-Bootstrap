@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Manage Reviews</title>
+    <link rel="stylesheet" href="admin_reviews.css">
+    <script src="https://kit.fontawesome.com/6d5273fb5e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+
+        <div class="page">
+
+            <div class="side_bar">
+                <div id="restos_page">Restaurants</div>
+                <div id="users_page">Users</div>
+                <div class="current_page" id="reviews_page">Reviews</div>
+            </div>
+
+            <div class="page_content">
+                <div class="tool_header">
+                    Manage Reviews
+                </div>
+
+                <div class="panel">
+                    <table>
+                        <tr>
+                            <th>Review ID</th>
+                            <th>User ID</th>
+                            <th>User Name</th>
+                            <th>Restaurant</th>
+                            <th>Review COntent</th>
+                            <th>Accept</th>
+                            <th>Decline</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="admin_reviews.js"></script>
+</body>
+</html>

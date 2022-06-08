@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Admin Page classes */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Styles */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    max-width: 800px;
+}
+.form label,.form input, .form button, form select{
+    margin: 10px;
+    width: 200px;
+}
+
+.form input ,form select{
+    border-radius:5px;
+    border: 1px solid #BABD42;
+    height: 30px;
+}
+
+input textarea {
+    width: 500px;
+    height: 500px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #FFEF82;
+}
+
+.header > img {
+    height: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+}
+
+.side_bar {
+    height: 100vh;
+    width: 200px;
+    background-color: #BABD42;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.side_bar > div {
+    width: 100%;
+    font-size: 25px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.side_bar > div:hover {
+    background-color: #FFEF82;
+    cursor: pointer;
+    color: #82954B;
+}
+
+.current_page
+{
+    background-color: darkgreen;
+}
+
+.header > img {
+    cursor: pointer;
+}
+
+.page_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.tool_header {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #82954B
+}
+
+.panel {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th {
+    height: 50px;
+    background-color: #BABD42;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.fa-pen-to-square {
+    color: #82954B;
+    font-size: 25px;
+}
+
+.fa-xmark {
+    color: red;
+    font-size: 25px;   
+}
+
+.edit,.delete{
+    cursor: pointer;
+}
+
+
+/* Utilities */
+button {
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #82954B;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #BABD42;
+}
+
+@media only screen and (max-width: 600px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .side_bar {
+        height: fit-content;
+        width: 100%;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .page_content {
+        flex-grow: 0;
+    }
+
+    .panel {
+        width: 400px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+    
+    .form > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
